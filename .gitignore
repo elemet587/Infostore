@@ -1,0 +1,307 @@
+# Saúde e Bem Estar - .gitignore
+
+# ===================================
+# Sistema Operacional
+# ===================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# Editores e IDEs
+# ===================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ===================================
+# Desenvolvimento Web
+# ===================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.node_repl_history
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# ===================================
+# Build e Distribuição
+# ===================================
+
+# Build directories
+build/
+dist/
+out/
+.cache/
+.parcel-cache/
+
+# Static site generators
+_site/
+.jekyll-cache/
+.gatsby/
+public/
+
+# ===================================
+# Arquivos de Configuração Sensíveis
+# ===================================
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de configuração com informações sensíveis
+config.json
+secrets.json
+database.json
+
+# Chaves de API
+api-keys.txt
+*.key
+*.pem
+
+# ===================================
+# Arquivos Temporários
+# ===================================
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Cache files
+*.cache
+.cache/
+.temp/
+
+# ===================================
+# Mídia e Assets (Opcionais)
+# ===================================
+
+# Imagens originais em alta resolução (manter apenas as otimizadas)
+# assets/originals/
+# *.psd
+# *.ai
+# *.sketch
+
+# Vídeos grandes
+# *.mp4
+# *.mov
+# *.avi
+
+# ===================================
+# Ferramentas de Desenvolvimento
+# ===================================
+
+# Live Server
+.live-server/
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Less
+*.less.map
+
+# Stylus
+*.styl.map
+
+# PostCSS
+*.pcss.map
+
+# ===================================
+# Backup e Arquivos de Recuperação
+# ===================================
+
+# Backups automáticos
+*.backup
+*.bak
+*~
+*.orig
+
+# Arquivos de recuperação
+*.recover
+*.recovery
+
+# ===================================
+# Compressão e Arquivos
+# ===================================
+
+# Arquivos comprimidos
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ===================================
+# Dados Locais
+# ===================================
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Dados de teste local
+test-data/
+mock-data/
+
+# ===================================
+# Documentação Gerada
+# ===================================
+
+# JSDoc
+docs/jsdoc/
+
+# Storybook
+storybook-static/
+
+# ===================================
+# Análise e Testes
+# ===================================
+
+# Coverage directory usado pelo nyc
+coverage/
+*.lcov
+
+# Arquivos de teste
+*.test.js.snap
+__tests__/coverage/
+
+# ===================================
+# Deploy e CI/CD
+# ===================================
+
+# Netlify
+.netlify/
+
+# Vercel
+.vercel/
+
+# Heroku
+.heroku/
+
+# GitHub Actions
+.github/workflows/*.yml.backup
+
+# ===================================
+# Específico do Projeto
+# ===================================
+
+# Arquivos de design (descomente se necessário)
+# design-files/
+# *.fig
+# *.xd
+
+# Documentos de briefing (descomente se necessário)
+# briefing/
+# client-assets/
+
+# Notas pessoais
+notes.txt
+todo.txt
+ideas.md
+
+# ===================================
+# Performance e Otimização
+# ===================================
+
+# Bundle analyzer
+bundle-report.html
+stats.json
+
+# Lighthouse reports
+lighthouse-report.html
