@@ -5,239 +5,299 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infostore - Vendas e Soluções Tecnológicas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        'primary-dark': '#1e40af',
+                        'primary-light': '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .hero-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-        }
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="assets/images/logo.jpg" alt="Infostore" class="h-10 w-auto mr-3">
-                    <div>
-                        <h1 class="text-xl font-bold text-blue-900">Infostore</h1>
-                        <p class="text-sm text-gray-600">📲Vendas e Soluções Tecnológicas</p>
+                    <img src="assets/images/logo.jpg" alt="Infostore Logo" class="h-10 w-auto mr-3" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="hidden bg-primary text-white px-3 py-1 rounded-lg font-bold text-xl">IS</div>
+                    <span class="text-2xl font-bold text-primary">Infostore</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                        <a href="#produtos" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Produtos</a>
+                        <a href="#servicos" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Serviços</a>
+                        <a href="#sobre" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
+                        <a href="#contacto" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
                     </div>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="text-gray-700 hover:text-blue-900 transition">Início</a>
-                    <a href="#produtos" class="text-gray-700 hover:text-blue-900 transition">Produtos</a>
-                    <a href="#servicos" class="text-gray-700 hover:text-blue-900 transition">Serviços</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-blue-900 transition">Sobre</a>
-                    <a href="#contacto" class="text-gray-700 hover:text-blue-900 transition">Contacto</a>
-                </nav>
-                <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Início</a>
+                <a href="#produtos" class="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Produtos</a>
+                <a href="#servicos" class="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Serviços</a>
+                <a href="#sobre" class="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                <a href="#contacto" class="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-16 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        📲 Vendas e Soluções Tecnológicas
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Na Infostore, oferecemos os melhores computadores e soluções tecnológicas em Angola. Qualidade, garantia e suporte técnico especializado.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#produtos" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+                            Ver Produtos
+                        </a>
+                        <a href="tel:+244926625296" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center">
+                            <i class="fas fa-phone mr-2"></i>Ligar Agora
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Computador Moderno" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-primary-light text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Garantia Completa</h3>
+                    <p class="text-gray-600">Todos os nossos produtos vêm com garantia completa e suporte técnico especializado.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-primary-light text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Entrega Rápida</h3>
+                    <p class="text-gray-600">Entregamos em toda Luanda com rapidez e segurança diretamente na sua casa ou escritório.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-primary-light text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Instalação & Suporte</h3>
+                    <p class="text-gray-600">Oferecemos instalação completa e suporte técnico contínuo para todos os clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossos Produtos em Destaque</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Descubra nossa seleção de computadores de alta qualidade, perfeitos para trabalho, estudos e entretenimento.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Computador Gaming" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">PC Gaming Pro</h3>
+                        <p class="text-gray-600 mb-4">Intel i5, 16GB RAM, GTX 1660 Super, 512GB SSD - Perfeito para jogos e trabalho pesado.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">450.000 Kz</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+                                Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laptop Business" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Laptop Business</h3>
+                        <p class="text-gray-600 mb-4">Intel i7, 8GB RAM, 256GB SSD - Ideal para profissionais e estudantes universitários.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">320.000 Kz</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+                                Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="All-in-One Desktop" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Desktop All-in-One</h3>
+                        <p class="text-gray-600 mb-4">Intel i3, 8GB RAM, 1TB HDD - Solução completa para casa e escritório com design elegante.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">180.000 Kz</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+                                Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="tel:+244926625296" class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors inline-block">
+                    <i class="fab fa-whatsapp mr-2"></i>Ver Mais Produtos no WhatsApp
                 </a>
             </div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-bg text-white pt-24 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                    Tecnologia que <span class="text-blue-300">Transforma</span>
-                </h2>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                    Computadores, eletrônicos e soluções tecnológicas para gamers, estudantes, profissionais e empresas em Luanda.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#produtos" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                        Ver Produtos
-                    </a>
-                    <a href="https://wa.me/244926625296" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">
-                        Solicitar Orçamento
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- Produtos Destacados -->
-    <section id="produtos" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Produtos em Destaque</h3>
-                <p class="text-lg text-gray-600">Computadores selecionados para atender suas necessidades</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Produto 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=300&fit=crop" alt="Gaming Desktop" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Gaming Desktop Pro</h4>
-                        <p class="text-gray-600 mb-4">Intel i7, RTX 4060, 16GB RAM, SSD 1TB</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-900">850.000 Kz</span>
-                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                                Comprar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Laptop Business" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Laptop Business Elite</h4>
-                        <p class="text-gray-600 mb-4">Intel i5, 8GB RAM, SSD 512GB, 15.6"</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-900">420.000 Kz</span>
-                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                                Comprar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&h=300&fit=crop" alt="Workstation" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Workstation Designer</h4>
-                        <p class="text-gray-600 mb-4">AMD Ryzen 7, 32GB RAM, RTX 4070</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-900">1.200.000 Kz</span>
-                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                                Comprar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços -->
+    <!-- Services Section -->
     <section id="servicos" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h3>
-                <p class="text-lg text-gray-600">Soluções completas para suas necessidades tecnológicas</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
+                <p class="text-xl text-gray-600">Soluções completas para todas as suas necessidades tecnológicas</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-truck text-blue-900 text-2xl"></i>
+                    <div class="bg-blue-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop text-3xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Entrega Rápida</h4>
-                    <p class="text-gray-600">Entrega em toda Luanda com segurança e agilidade</p>
+                    <h3 class="text-lg font-semibold mb-2">Venda de Computadores</h3>
+                    <p class="text-gray-600 text-sm">Ampla variedade de desktops e laptops para todas as necessidades.</p>
                 </div>
-                
+
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tools text-blue-900 text-2xl"></i>
+                    <div class="bg-blue-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wrench text-3xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Instalação</h4>
-                    <p class="text-gray-600">Instalação e configuração profissional dos seus equipamentos</p>
+                    <h3 class="text-lg font-semibold mb-2">Suporte Técnico</h3>
+                    <p class="text-gray-600 text-sm">Manutenção e reparo de computadores com técnicos especializados.</p>
                 </div>
-                
+
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-headset text-blue-900 text-2xl"></i>
+                    <div class="bg-blue-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-3xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Suporte Técnico</h4>
-                    <p class="text-gray-600">Suporte especializado para resolver qualquer problema</p>
+                    <h3 class="text-lg font-semibold mb-2">Instalação</h3>
+                    <p class="text-gray-600 text-sm">Instalação de sistemas operativos e software especializado.</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Entrega</h3>
+                    <p class="text-gray-600 text-sm">Entrega rápida e segura em toda a região de Luanda.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre -->
+    <!-- About Section -->
     <section id="sobre" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Por que escolher a Infostore?</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-shield-alt text-blue-900 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold mb-1">Garantia Completa</h4>
-                                <p class="text-gray-600">Todos os produtos com garantia e suporte pós-venda</p>
-                            </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sobre a Infostore</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        A Infostore é uma empresa angolana especializada em vendas e soluções tecnológicas. Atendemos desde gamers profissionais até estudantes e engenheiros, oferecendo produtos de qualidade com garantia completa.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Nossa missão é democratizar o acesso à tecnologia em Angola, fornecendo computadores e soluções tecnológicas com os melhores preços do mercado, sem comprometer a qualidade.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <div class="text-2xl font-bold text-primary">500+</div>
+                            <div class="text-sm text-gray-600">Clientes Satisfeitos</div>
                         </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-dollar-sign text-blue-900 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold mb-1">Preços Competitivos</h4>
-                                <p class="text-gray-600">Os melhores preços do mercado angolano</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-users text-blue-900 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold mb-1">Atendimento Especializado</h4>
-                                <p class="text-gray-600">Equipe técnica qualificada para ajudar na melhor escolha</p>
-                            </div>
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <div class="text-2xl font-bold text-primary">2+</div>
+                            <div class="text-sm text-gray-600">Anos de Experiência</div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Equipe Infostore" class="rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipe Infostore" class="rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="py-16 bg-blue-900 text-white">
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold mb-4">Entre em Contacto</h3>
-                <p class="text-lg">Estamos prontos para ajudar com suas necessidades tecnológicas</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contacto</h2>
+                <p class="text-xl text-blue-100">Estamos aqui para ajudar com suas necessidades tecnológicas</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <i class="fas fa-map-marker-alt text-3xl mb-4"></i>
-                    <h4 class="text-xl font-semibold mb-2">Localização</h4>
-                    <p>Luanda, Angola</p>
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Telefone</h3>
+                    <p class="text-blue-100">+244 926 625 296</p>
                 </div>
-                
+
                 <div class="text-center">
-                    <i class="fas fa-phone text-3xl mb-4"></i>
-                    <h4 class="text-xl font-semibold mb-2">Telefone</h4>
-                    <p>+244 926 625 296</p>
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-blue-100">info@store.com</p>
                 </div>
-                
+
                 <div class="text-center">
-                    <i class="fas fa-envelope text-3xl mb-4"></i>
-                    <h4 class="text-xl font-semibold mb-2">Email</h4>
-                    <p>info@store.com</p>
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Localização</h3>
+                    <p class="text-blue-100">Luanda, Angola</p>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
+                <h3 class="text-2xl font-semibold mb-6">Siga-nos nas Redes Sociais</h3>
                 <div class="flex justify-center space-x-6">
-                    <a href="#" class="text-white hover:text-blue-300 transition">
-                        <i class="fab fa-facebook text-2xl"></i>
+                    <a href="#" class="bg-white text-primary w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
                     </a>
-                    <a href="#" class="text-white hover:text-blue-300 transition">
-                        <i class="fab fa-instagram text-2xl"></i>
-                    </a>
-                    <a href="https://wa.me/244926625296" class="text-white hover:text-blue-300 transition">
-                        <i class="fab fa-whatsapp text-2xl"></i>
+                    <a href="#" class="bg-white text-primary w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
                     </a>
                 </div>
-                <p class="mt-4 text-blue-200">@infostore_tecnology</p>
+                <p class="text-blue-100 mt-4">@infostore_tecnology</p>
             </div>
         </div>
     </section>
@@ -246,14 +306,30 @@
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <p>&copy; 2025 Infostore. Todos os direitos reservados.</p>
-                <p class="text-gray-400 mt-2">📲Vendas e Soluções Tecnológicas</p>
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold">Infostore</span>
+                </div>
+                <p class="text-gray-400 mb-4">📲 Vendas e Soluções Tecnológicas</p>
+                <p class="text-gray-500 text-sm">&copy; 2025 Infostore. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/244926625296" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
     <script>
-        // Smooth scrolling para links de navegação
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -263,21 +339,19 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
                 }
             });
         });
 
-        // Animação simples para destacar produtos
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
-                }
-            });
-        });
-
-        document.querySelectorAll('.card-hover').forEach(card => {
-            observer.observe(card);
+        // Product consultation buttons
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Consultar')) {
+                button.addEventListener('click', () => {
+                    window.open('https://wa.me/244926625296?text=Olá! Gostaria de saber mais sobre este produto.', '_blank');
+                });
+            }
         });
     </script>
 </body>
