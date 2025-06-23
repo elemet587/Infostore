@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infostore - Vendas e Soluções Tecnológicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="assets/images/logo.jpg" alt="Infostore" class="h-10 w-auto mr-3">
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-900">Infostore</h1>
+                        <p class="text-sm text-gray-600">📲Vendas e Soluções Tecnológicas</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-900 transition">Início</a>
+                    <a href="#produtos" class="text-gray-700 hover:text-blue-900 transition">Produtos</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-blue-900 transition">Serviços</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-900 transition">Sobre</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-900 transition">Contacto</a>
+                </nav>
+                <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg text-white pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Tecnologia que <span class="text-blue-300">Transforma</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Computadores, eletrônicos e soluções tecnológicas para gamers, estudantes, profissionais e empresas em Luanda.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#produtos" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Ver Produtos
+                    </a>
+                    <a href="https://wa.me/244926625296" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Destacados -->
+    <section id="produtos" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Produtos em Destaque</h3>
+                <p class="text-lg text-gray-600">Computadores selecionados para atender suas necessidades</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=300&fit=crop" alt="Gaming Desktop" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Gaming Desktop Pro</h4>
+                        <p class="text-gray-600 mb-4">Intel i7, RTX 4060, 16GB RAM, SSD 1TB</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-900">850.000 Kz</span>
+                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Laptop Business" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Laptop Business Elite</h4>
+                        <p class="text-gray-600 mb-4">Intel i5, 8GB RAM, SSD 512GB, 15.6"</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-900">420.000 Kz</span>
+                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&h=300&fit=crop" alt="Workstation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Workstation Designer</h4>
+                        <p class="text-gray-600 mb-4">AMD Ryzen 7, 32GB RAM, RTX 4070</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-900">1.200.000 Kz</span>
+                            <a href="https://wa.me/244926625296" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h3>
+                <p class="text-lg text-gray-600">Soluções completas para suas necessidades tecnológicas</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-blue-900 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Entrega Rápida</h4>
+                    <p class="text-gray-600">Entrega em toda Luanda com segurança e agilidade</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-blue-900 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Instalação</h4>
+                    <p class="text-gray-600">Instalação e configuração profissional dos seus equipamentos</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-blue-900 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Suporte Técnico</h4>
+                    <p class="text-gray-600">Suporte especializado para resolver qualquer problema</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Por que escolher a Infostore?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-900 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Garantia Completa</h4>
+                                <p class="text-gray-600">Todos os produtos com garantia e suporte pós-venda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-dollar-sign text-blue-900 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Preços Competitivos</h4>
+                                <p class="text-gray-600">Os melhores preços do mercado angolano</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-blue-900 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Atendimento Especializado</h4>
+                                <p class="text-gray-600">Equipe técnica qualificada para ajudar na melhor escolha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Equipe Infostore" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Entre em Contacto</h3>
+                <p class="text-lg">Estamos prontos para ajudar com suas necessidades tecnológicas</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-3xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Localização</h4>
+                    <p>Luanda, Angola</p>
+                </div>
+                
+                <div class="text-center">
+                    <i class="fas fa-phone text-3xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Telefone</h4>
+                    <p>+244 926 625 296</p>
+                </div>
+                
+                <div class="text-center">
+                    <i class="fas fa-envelope text-3xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Email</h4>
+                    <p>info@store.com</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-white hover:text-blue-300 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-300 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/244926625296" class="text-white hover:text-blue-300 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+                <p class="mt-4 text-blue-200">@infostore_tecnology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2025 Infostore. Todos os direitos reservados.</p>
+                <p class="text-gray-400 mt-2">📲Vendas e Soluções Tecnológicas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação simples para destacar produtos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
