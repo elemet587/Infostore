@@ -37,7 +37,7 @@ A **Infostore** é uma empresa angolana focada em vendas e soluções tecnológi
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/Emicy963/infostore-landing.git
+git clone https://github.com/Emicy963/Infostore.git
 cd infostore-landing
 ```
 
@@ -45,8 +45,8 @@ cd infostore-landing
 
 ```bash
 # Coloque o arquivo logo.png em:
-mkdir -p static/media/
-# Adicione: static/media/logo.png
+mkdir -p assets/images/
+# Adicione: assets/images/logo.png
 ```
 
 3. Abra o arquivo `index.html` no navegador ou use um servidor local:
@@ -68,11 +68,12 @@ npx http-server
 infostore-landing/
 │
 ├── index.html              # Página principal
-├── static/
-│   └── media/
+├── assets/
+│   └── images/
 │       └── logo.png        # Logo da empresa
 ├── README.md               # Documentação
 ├── CONTRIBUTE.md           # Guia de contribuição
+├── .gitignore              # Arquivos ignorados
 └── LICENSE                 # Licença do projeto
 ```
 
